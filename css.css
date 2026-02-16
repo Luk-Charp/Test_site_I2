@@ -167,7 +167,9 @@ button {
 }
 .text_session p {
     position: absolute;
-    font-size: 250px;
+    overflow: hidden;
+    /*font-size: 250px;*/
+    font-size: clamp(60px, 18vw, 250px);
     font-family: 'Anton', sans-serif;
     color: #f1f1f1;
     z-index: -10;
@@ -416,6 +418,22 @@ button {
 .ranked .big_title {
     font-size: 20px;
 }
+
+/*Pour essayer le responsive des logos en svg en bas de page*/
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.logos img {
+    width: clamp(80px, 10vw, 140px);
+    height: auto;
+}
+
+
 footer {
     background-color: #1a1a1a;
     color: #fff;
