@@ -368,7 +368,7 @@ button {
 
 /* testimonials */
 .testimonials{
-    margin: 120px;
+    margin: 120px 0;
     /*width: 100%;*/
     display: flex;
     justify-content: space-between;
