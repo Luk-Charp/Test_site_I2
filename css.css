@@ -157,7 +157,7 @@ button {
     margin-right: 15px;
 }
 /* text section */
-.text_session{
+.text_section{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +165,7 @@ button {
     font-weight: bold;
     position: relative;
 }
-.text_session p {
+.text_section p {
     position: absolute;
     overflow: hidden;
     /*font-size: 250px;*/
@@ -176,7 +176,7 @@ button {
     line-height: 270px;
     text-transform: uppercase;
 }
-.text_session h2{
+.text_section h2{
     font-size: 30px;
 }
 
@@ -329,8 +329,8 @@ button {
 /* big */
 
 .big {
-    margin: 290px 0;
-    margin-bottom: 50px;
+    margin: 290px 0 150px 0;
+    /*margin-bottom: 50px;*/
 }
 .big p {
     font-size: 260px;
@@ -342,7 +342,12 @@ button {
 /* service*/
 
 .services {
+    /*display: flex;
+    text-align: center;
+    margin-top: 35px;*/
     display: flex;
+    flex-wrap: wrap;          /* Permet le retour à la ligne */
+    justify-content: center;  /* Centre les éléments */
     text-align: center;
     margin-top: 35px;
 }
@@ -351,6 +356,7 @@ button {
     margin: 0 35px;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
