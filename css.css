@@ -13,6 +13,8 @@ body {
 
 
 
+
+
 section {
     padding: 20px 15%;
 }
@@ -31,18 +33,62 @@ button {
 }
 .home {
     min-height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url("assets/Paysage.jpg"); /* Dégradé de couleur sur l'image */
+    background: linear-gradient(rgba(10, 31, 68, 0.25),rgba(10, 31, 68, 0.6)), url("assets/Paysage.jpg"); /* Dégradé de couleur sur l'image */
     background-position: center;
     background-size: cover;
     position: relative;
     margin-bottom: 230px;
     width: 100%;
 }
-.menu{
+/*.menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}*/
+
+
+
+
+
+
+
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;   /* transparent au départ */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
 }
+
+
+
+
+
+
+
+
+.menu.scrolled{ /* pour que le menu devienne noir apres */
+    background-color: #0A1F44;    /* devient noir */
+    /*box-shadow: 0 4px 20px rgba(0,0,0,0.3);*/
+    background: linear-gradient(to bottom, #0A1F44, #071530);
+}
+
+
+
+
+
+
+
+
+
+
 .logo{
     font-weight: 400;
     color: #fff;
@@ -80,6 +126,34 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*home_page_content*/
 .home_page_content{
     position: absolute;
@@ -112,6 +186,34 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .white_btn{
     background-color: transparent;
     border: 1px solid #fff;
@@ -137,12 +239,61 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .image_box{
     position: absolute;
     bottom: -45px; /*-140px changer la position du modele 3D de haut en bas*/
     right: 10%; /*15%*/
     width: clamp(250px, 40vw, 600px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -159,6 +310,34 @@ button {
     object-fit: cover;
     box-shadow: 0 32px 80px -32px rgba(0,0,0,.24);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -199,6 +378,34 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* owner */
 .owner{
     display: flex;
@@ -217,6 +424,34 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .image_box_owner img{
     width: 100%;
     height: 100%;
@@ -228,9 +463,65 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .content_box{
     width: 45%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -268,6 +559,34 @@ button {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .content_box button{
     margin-top: 30px;
 }
@@ -282,6 +601,34 @@ button {
 .content_box p{
     margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -334,6 +681,20 @@ button {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .text-box p{
     margin-bottom: 25px;
 }
@@ -356,7 +717,35 @@ button {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* big */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .big {
@@ -371,6 +760,20 @@ button {
     font-size: 80px;
 }
 /* service*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .services {
@@ -412,6 +815,20 @@ button {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* testimonials */
 .testimonials{
     margin: 120px 0;
@@ -430,6 +847,20 @@ button {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .comment img{
     width: 50px;
     height: 50px;
@@ -437,6 +868,20 @@ button {
     border-radius: 50%;
     margin-right: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .comment:hover {
@@ -452,6 +897,12 @@ button {
 }
 
 
+
+
+
+
+
+
 /* ranked */
 .ranked {
     text-align: center;
@@ -462,7 +913,11 @@ button {
 }
 
 
+
+
 /*Pour essayer le responsive des logos en svg en bas de page*/
+
+
 
 
 .logos {
@@ -471,6 +926,8 @@ button {
     justify-content: center;
     gap: 40px;
 }
+
+
 
 
 .logos img {
@@ -491,8 +948,10 @@ footer {
 }
 
 
+
+
 /* Responsive */
-@media screen and (max-width:1500px) {      /*(max-width:1653px)*/
+@media screen and (max-width:1024px) {      /*(max-width:1653px)*/
     body {
         transition: margin-left .5s;
     }
@@ -504,6 +963,32 @@ footer {
         height: auto;
         max-width: 500px;
     }
+
+
+
+
+    .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*padding: 20px 15%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+
+
+
+    .menu.scrolled{
+    background-color: #000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+   
     .home {
         min-height: 50vh;
         margin: 0;
@@ -560,7 +1045,35 @@ footer {
         }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     .links {
@@ -665,9 +1178,5 @@ footer {
         margin-top: 20px;*/
         padding: 25px;
     }
+   
 }
-
-
-
-
-
