@@ -11,12 +11,16 @@ body {
 }
 
 
+
+
 section {
     padding: 20px 15%;
 }
 ul {
     list-style: none;
 }
+
+
 
 
 a {
@@ -27,7 +31,7 @@ button {
 }
 .home {
     min-height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url("assets/Paysage.png"); /* Dégradé de couleur sur l'image */
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)), url("assets/Paysage.jpg"); /* Dégradé de couleur sur l'image */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -74,6 +78,8 @@ button {
 }
 
 
+
+
 /*home_page_content*/
 .home_page_content{
     position: absolute;
@@ -104,6 +110,8 @@ button {
 }
 
 
+
+
 .white_btn{
     background-color: transparent;
     border: 1px solid #fff;
@@ -127,25 +135,32 @@ button {
 /* image_box */
 
 
+
+
 .image_box{
     position: absolute;
     bottom: -45px; /*-140px changer la position du modele 3D de haut en bas*/
-    right: 15%;
+    right: 10%; /*15%*/
+    width: clamp(250px, 40vw, 600px);
 }
+
 
 
 .image_box iframe{ /*img, j'ai remplacé l'image de base par le modele 3D*/
     border-radius: 6px;
-    width: 600px;
+    max-width: 600px;   /* taille max sur grand écran */
+    /*width: 600px;*/
     height: 600px;
     width: 100%;
     margin-right: 0px;
     /*max-width: 600px;*/
-    /*height: auto;*/
+    height: auto;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     box-shadow: 0 32px 80px -32px rgba(0,0,0,.24);
 }
+
+
 
 
 .image_box p{
@@ -182,6 +197,8 @@ button {
 }
 
 
+
+
 /* owner */
 .owner{
     display: flex;
@@ -198,6 +215,8 @@ button {
 }
 
 
+
+
 .image_box_owner img{
     width: 100%;
     height: 100%;
@@ -207,9 +226,13 @@ button {
 }
 
 
+
+
 .content_box{
     width: 45%;
 }
+
+
 
 
 .small_title{
@@ -243,6 +266,8 @@ button {
 }
 
 
+
+
 .content_box button{
     margin-top: 30px;
 }
@@ -257,6 +282,8 @@ button {
 .content_box p{
     margin-top: 20px;
 }
+
+
 
 
 /* background */
@@ -306,6 +333,7 @@ button {
     font-size: 30px;
 }
 
+
 .text-box p{
     margin-bottom: 25px;
 }
@@ -327,7 +355,9 @@ button {
     color: #fff;
 }
 
+
 /* big */
+
 
 .big {
     margin: 290px 0 150px 0;
@@ -341,6 +371,7 @@ button {
     font-size: 80px;
 }
 /* service*/
+
 
 .services {
     /*display: flex;
@@ -380,6 +411,7 @@ button {
     color: #999;
 }
 
+
 /* testimonials */
 .testimonials{
     margin: 120px 0;
@@ -397,6 +429,7 @@ button {
     transition: 0.5s;
 }
 
+
 .comment img{
     width: 50px;
     height: 50px;
@@ -404,6 +437,7 @@ button {
     border-radius: 50%;
     margin-right: 20px;
 }
+
 
 .comment:hover {
     box-shadow: 0 32px 80px -32px rgba(0, 0, 0, 24);
@@ -417,6 +451,7 @@ button {
     align-items: center;
 }
 
+
 /* ranked */
 .ranked {
     text-align: center;
@@ -426,7 +461,9 @@ button {
     font-size: 20px;
 }
 
+
 /*Pour essayer le responsive des logos en svg en bas de page*/
+
 
 .logos {
     display: flex;
@@ -435,10 +472,13 @@ button {
     gap: 40px;
 }
 
+
 .logos img {
     width: clamp(80px, 10vw, 140px);
     height: auto;
 }
+
+
 
 
 footer {
@@ -450,8 +490,9 @@ footer {
     font-weight: bold;
 }
 
+
 /* Responsive */
-@media screen and (max-width:1653px) {
+@media screen and (max-width:1500px) {      /*(max-width:1653px)*/
     body {
         transition: margin-left .5s;
     }
@@ -509,7 +550,7 @@ footer {
         color: #000;
         outline: none;
         font-weight: bold;
-        letter-spacing: 2px; 
+        letter-spacing: 2px;
     }
     .closebtn {
         display: block;
@@ -518,7 +559,9 @@ footer {
         right: 25px;
         }
 
+
 */
+
 
     .links {
         background-color: #1a1a1a;
@@ -623,3 +666,8 @@ footer {
         padding: 25px;
     }
 }
+
+
+
+
+
