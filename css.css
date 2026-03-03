@@ -10,8 +10,20 @@ body {
     overflow-x: hidden;
 }
 
+section:not(.home) {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease; /*Pour changer la vitesse de transition en descente*/
+}
 
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 
@@ -65,6 +77,7 @@ button {
     background: transparent;   /* transparent au départ */
     transition: background 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 
@@ -1180,3 +1193,8 @@ footer {
     }
    
 }
+
+
+
+
+
