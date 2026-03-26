@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiCad - Machine That Draws</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="kicad.css">
+    <link rel="icon" href="assets/favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+        <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <script src="https://unpkg.com/tracespace-viewer@0.10.0/dist/tracespace-viewer.min.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/61523b4b4d.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+
+
+<!-- MENU -->
+<div class="menu">
+    <a href="index.html" class="logo">
+    MACHINE THAT <br>
+    <span>DRAWS</span>
+</a>
+
+
+    <ul class="links">
+        <li><a href="index.html">Accueil</a></li>
+        <li class="hide-mobile"><a href="https://github.com/Luk-Charp?tab=repositories">Portfolio</a></li>
+        <li class="hide-mobile"><a href="kicad.html">Kicad</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+
+
+<section class="kicad-title">
+    <h1>Fichiers KiCad</h1>
+    <p>Téléchargez les fichiers électroniques du projet</p>
+</section>
+
+
+
+
+<section class="kicad-container">
+
+
+    <div class="kicad-card">
+        <i class="fa-solid fa-microchip"></i>
+        <h2>Schéma électronique</h2>
+        <p>Fichier .sch du circuit</p>
+        <a href="fichiers_kicad/projet.kicad_sch" download="machine-that-draws.zip">Télécharger</a>
+    </div>
+
+
+    <div class="kicad-card1">
+        <i class="fa-solid fa-layer-group"></i>
+        <h2>PCB</h2>
+        <p>Fichier PCB KiCad</p>
+        <a href="fichiers_kicad/projet.kicad_pcb" download>Télécharger</a>
+    </div>
+
+
+    <div class="kicad-card1">
+        <i class="fa-solid fa-file-zipper"></i>
+        <h2>Projet complet</h2>
+        <p>Projet KiCad complet</p>
+        <a href="fichiers_kicad/projet.kicad_pro" download>Télécharger</a>
+    </div>
+
+
+</section>
+
+
+<section class="kicad-viewer">
+    <h2>Aperçu du PCB</h2>
+    <div id="viewer">
+        <model-viewer 
+src="fichiers_kicad/pcb.glb" 
+auto-rotate 
+camera-controls 
+style="width:100%; height:500px;">
+</model-viewer>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </div>
+</section>
+
+
+<footer>
+<p>Tous droits réservés Groupe 4</p>
+</footer>
+
+
+<script src="js.js"></script>
+
+
+
+
+</body>
+</html>
+
+
+

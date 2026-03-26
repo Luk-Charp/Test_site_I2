@@ -1,0 +1,396 @@
+/* RESET BASIQUE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+.home {
+    min-height: 90vh;
+    background: linear-gradient(to bottom, #0A1F44, #071530); /* Dégradé de couleur sur l'image */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 230px;
+    width: 100%;
+}
+
+
+.menu {
+    background: linear-gradient(to bottom, #0A1F44, #071530);
+    border-bottom: 2px solid rgba(0,0,0,1);
+}
+
+
+
+
+.links{
+    display: flex;
+}
+
+
+
+
+.links li {
+    margin: 20px;
+}
+.links li a{
+    color: white;
+    position: relative;
+}
+.links li a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #f9ad4a;    /* Sous lignage des titres */
+    height: 4px;
+    width: 0%;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.links li a:hover:after{
+    width: 100%;
+}
+/* ===== TITRE ===== */
+
+
+
+
+.contact-title {
+    margin-top: 200px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+
+
+
+.contact-title h1 {
+    font-size: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+.contact-title p {
+    color: #777;
+    margin-top: 10px;
+}
+
+
+
+
+/* ===== BLOCS CONTACT ===== */
+
+
+
+
+.team-container {
+    width: 85%;
+    margin: 120px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+
+
+
+.contact-card {
+    width: 220px;              /* largeur contrôlée */
+    height: 130px;             /* rectangle horizontal */
+    padding: 20px;
+
+
+
+
+    background: #F7F6E4;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px -20px rgba(0,0,0,0.25);
+    transition: 0.3s;
+
+
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+
+
+
+.contact-card i {
+    font-size: 18px;
+    color: #f9ad4a;
+    margin-bottom: 10px;
+}
+
+
+
+
+.contact-card h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+
+
+
+.contact-card a {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+}
+
+
+
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+
+.member-info {
+    padding: 25px;
+    text-align: center;
+}
+
+
+
+
+.member-info h2 {
+    margin-bottom: 5px;
+}
+
+
+
+
+.member-info .role {
+    color: #f9ad4a;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+
+/* GROSSES CASES */
+
+
+
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+
+
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+
+
+
+
+    background: #f5f5f5;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #000;
+
+
+
+
+    transition: 0.3s;
+}
+
+
+
+
+.contact-box i {
+    font-size: 18px;
+}
+
+
+
+
+.contact-box:hover {
+    background: #f9ad4a;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+
+
+
+.member-card img {
+    width: 100%;
+    height: 320px;       /* Hauteur fixe propre */
+    object-fit: cover;   /* Coupe intelligemment */
+    border-radius: 12px 12px 0 0;
+   
+}
+.member-card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+
+/* ===== RESPONSIVE CONTACT ===== */
+@media screen and (max-width: 1024px) {
+
+
+    .links{
+    display: flex;
+    margin-left: 15px;
+}
+
+
+    .menu {
+        background: linear-gradient(to bottom, #0A1F44, #071530);
+    }
+
+
+    .contact-title h1 {
+        font-size: 60px;
+    }
+
+
+    .team-container {
+        grid-template-columns: 1fr; /* 1 colonne */
+        gap: 30px;
+        width: 90%;
+    }
+
+
+    .member-card {
+        max-width: 100%;
+    }
+
+
+    .member-card img {
+        height: 250px;
+    }
+
+
+    .contact-card {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .contact-box {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+
+    section:not(.home) {
+        opacity: 1;              /* visible direct */
+        transform: none;         /* pas de descente */
+        transition: none;        /* enlève animation */
+    }
+
+
+     .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*padding: 20px 15%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+
+
+
+
+
+    .menu.scrolled{
+    background-color: #000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+   
+    .home {
+        min-height: 50vh;
+        margin: 0;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    .home_page_content {
+        margin-top: 150px;
+        margin-left: 10px;
+        position: unset;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home_page_content .title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .hide-mobile {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
