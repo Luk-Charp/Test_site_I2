@@ -1,14 +1,15 @@
 .menu {
-    position: fixed;   /* 🔥 le point clé */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 260px;
-    height: 100vh;
-    background: white; /* ou ton style */
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto;
+    width: 100%;
+    padding: 20px 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #0A1F44, #071530);
     z-index: 1000;
+    border-bottom: 2px solid rgba(0,0,0,1);
 }
 
 
